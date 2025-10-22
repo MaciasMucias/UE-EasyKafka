@@ -33,26 +33,6 @@ using System.IO;
             );
 
         }
-        else if (Target.Platform == UnrealTargetPlatform.HoloLens)
-        {
-            string LibPath = Path.Combine(ModuleDirectory, "lib/WinArm64");
-            PublicAdditionalLibraries.Add(Path.Combine(LibPath, "rdkafka.lib"));
-            PublicAdditionalLibraries.Add(Path.Combine(LibPath, "rdkafka++.lib"));
-            /*
-			 Windows Kits libs
-			 */
-            PublicAdditionalLibraries.Add(Path.Combine(Target.WindowsPlatform.WindowsSdkDir, "Lib", Target.WindowsPlatform.WindowsSdkVersion, "um/arm64", "kernel32.Lib"));
-            PublicAdditionalLibraries.Add(Path.Combine(Target.WindowsPlatform.WindowsSdkDir, "Lib", Target.WindowsPlatform.WindowsSdkVersion, "um/arm64", "Secur32.Lib"));
-
-            PublicDependencyModuleNames.AddRange(
-            new string[]
-            {
-                "zlib",
-                "OpenSSLens"//OpenSSL libs for WinArm64 https://github.com/sha3sha3/UE-OpenSSL-Hololens.git
-            }
-            );
-
-        }
         else if (Target.Platform == UnrealTargetPlatform.Linux)
 		{
             string LibPath = Path.Combine(ModuleDirectory, "lib/Linux64");
