@@ -9,7 +9,6 @@ public class KafkaAdmin : ModuleRules
 	public KafkaAdmin(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-		CppStandard = CppStandardVersion.Cpp17;
         PublicSystemIncludePaths.Add(Path.Combine(ModuleDirectory, "Public"));
 
         PublicIncludePaths.AddRange(

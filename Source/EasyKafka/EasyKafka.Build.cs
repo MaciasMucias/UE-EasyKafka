@@ -9,7 +9,6 @@ public class EasyKafka : ModuleRules
 	public EasyKafka(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-		CppStandard = CppStandardVersion.Cpp17;
 
 		PublicIncludePaths.AddRange(
 			new string[] {
