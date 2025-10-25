@@ -24,7 +24,6 @@ EasyKafka is a Kafka/Redpanda client sub-system for unreal engine. It supports p
 Link the plugin modules to your project through `<YourModule>.build.cs`:
 
 ```cs
-CppStandard = CppStandardVersion.Cpp17;//avoid using boost
 if(Target.Platform == UnrealTargetPlatform.HoloLens || Target.Platform == UnrealTargetPlatform.Win64)
 	bUseRTTI = true;
 
