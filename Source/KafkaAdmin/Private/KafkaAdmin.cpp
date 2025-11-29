@@ -248,4 +248,4 @@ const FString FKafkaAdminModule::GetTopicConfigString(ETopicConfig TopicConfig)
 
 #undef LOCTEXT_NAMESPACE
 	
-IMPLEMENT_MODULE(FKafkaAdminModule, kafkaAdmin)
+IMPLEMENT_MODULE(FKafkaAdminModule, KafkaAdmin)

@@ -132,7 +132,7 @@ void FKafkaProducerModule::Produce(FString Topic, FString value, FString key, FR
 	To be optimized
 	sync is blocking never use it in bp
 	*/
-	UE_LOG(LogKafkaProducer, Display, TEXT("Producing record:\nTopic=%s\nValue=%s\nKey=%s"), *Topic, *value, *key);
+	//UE_LOG(LogKafkaProducer, Display, TEXT("Producing record:\nTopic=%s\nValue=%s\nKey=%s"), *Topic, *value, *key);
 	auto ValuePtr =std::make_shared<std::string>(std::string(TCHAR_TO_UTF8(*value)));
 	auto KeyPtr = std::make_shared<std::string>(std::string(TCHAR_TO_UTF8(*key)));
 
@@ -265,4 +265,4 @@ const FString FKafkaProducerModule::GetKafkaConfigString(EKafkaProducerConfig Ka
 
 #undef LOCTEXT_NAMESPACE
 	
-IMPLEMENT_MODULE(FKafkaProducerModule, kafkaProducer)
+IMPLEMENT_MODULE(FKafkaProducerModule, KafkaProducer)
